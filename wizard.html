@@ -1,0 +1,452 @@
+<html>
+<head>
+	<title>SINCLAIR TAB</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <style type="text/css">
+  .no-height{
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+    height:0px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+  }
+  .auto-height{
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+    padding-top:40px !important;
+    padding-bottom:40px !important;
+    height:auto !important;
+  }
+  .listing:nth-child(even){
+    background: #eee;
+  }
+  .listing:nth-child(odd){
+    background: #fff;
+  }
+  #form-delivery{
+    overflow:hidden;
+  }
+  .pad-top-0{
+    padding-top:0px;
+  }
+  .pad-top-5{
+    padding-top:5px;
+  }
+  .pad-all-5{
+    padding:5px;
+  }
+  .pad-all-15{
+    padding:15px;
+  }
+  .pad-all-25{
+    padding:25px;
+  }
+  .pad-left-25{
+    padding-left:25px;
+  }
+  .pad-right-25{
+    padding-right:25px;
+  }
+  .pad-top-25{
+    padding-top:25px;
+  }
+  .pad-bottom-25{
+    padding-bottom:25px;
+  }
+  .margin-top-25{
+    margin-top:25px !important;
+  }
+  .margin-left-25{
+    margin-left:25px;
+  }
+  .margin-right-25{
+    margin-right:25px;
+  }
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  </style>
+</head>
+
+<body>
+    
+    <div class="container">
+      <div class="row">
+        Home > xyz > (Breadcrumbs come here)
+      </div>
+
+      <!-- Process Tags -->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <span class="col-md-4 h1"><i class="fa fa-cubes"></i></span>
+            <span class="col-md-8 hidden-xs"><br><b>SELECT CONTAINER</b></span>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <span class="col-md-4 h1"><i class="fa fa-truck"></i></span>
+            <span class="col-md-8 hidden-xs"><br><b>PICK-UP /<br> DELIVERY</b></span>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <span class="col-md-4 h1"><i class="fa fa-credit-card"></i></span>
+            <span class="col-md-8 hidden-xs"><br><b>REVIEW / <br>BOOK</b></span>
+          </div>
+        </div>
+      </div>
+      <!-- Process Tag Ends -->
+
+      <!-- The Main Slider Part - 1 -->
+      <div id="slide1" class="hidden">
+        <div class="row" style="padding-bottom:30px; padding-top:25px;">
+          <span class="h1">30'</span><span class="h4">CONTAINER</span><br>
+          <a href=""><span class="text-muted small">(Change)</span></a>
+        </div>
+
+        <!-- The Template Repeater for Listing -->
+        <div class="row listing">
+            <div class="col-md-2" style="padding:25px;"> 
+              <img class="" src="img/address.jpg" style="width:150px; height:150px;">
+            </div>
+            <div class="col-md-8" style="padding:25px;">
+              <span class="h2"> 
+                Product Name
+              </span><br>
+              <span class="h2 price">
+                <b>$5000</b>
+              </span>
+              <br><br>
+              <p class="text-muted small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula ultricies sapien, ac imperdiet ligula rutrum ac. Cras eget erat mattis mi lacinia eleifend ac ac metus. Donec et augue a erat venenatis sodales id vitae sem. Quisque libero arcu, varius eget dui venenatis, varius cursus turpis. Mauris interdum molestie metus, nec vestibulum orci pulvinar eget. Proin sit amet 
+              </p>
+            </div>
+            <div class="col-md-2" style="padding:25px;margin-top:60px;">
+              <button type="submit" class="btn btn-danger btn-block" value="pick"><b>SELECT</b>&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></button>
+            </div>
+        </div>
+      </div>
+      <!-- Template Repeater Ends -->
+
+      <!-- Main Slider Part - 1 ends -->
+
+
+     
+
+
+      <!-- Main Slider Part - 2 -->
+      <div id="slide2" class="hidden">
+        <div class="col-md-8" style="padding-top:25px;">
+          <form>                    
+          <!-- The Primary Options -->
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2" style="padding-bottom:25px;">
+                <div class="col-md-6">
+                  <input type="radio" name="need" onclick="$('#date').focus();$('#form-delivery').removeClass('auto-height');">&nbsp;PICK-UP
+                </div>
+                <div class="col-md-6">
+                  <input type="radio" name="need" onclick="$('#date').focus();$('#form-delivery').addClass('auto-height');">&nbsp;DELIVER
+                </div>
+                <div class="input-group pad-top-5">
+                  <input type="text" class="form-control" value="" placeholder="Enter Date..." id="date">
+                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                </div>
+            </div>
+          </div>
+          <!-- Primary Options End -->
+
+          <!-- Delivery Address -->
+          <div class="row no-height pad-all-25" id="form-delivery">
+            <span class="h4"><b>DELIVERY ADDRESS</b></span><br><br>
+
+            <!-- Form Fill New -->
+            <div id="addr-fill" class="hidden">
+              <div class="row pad-top-5">
+                <div class="col-md-2">
+                  <label class="h4 hidden-xs hidden-sm">Name</label>
+                </div>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Name...">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row pad-top-5">
+                <div class="col-md-2">
+                  <label class="h4 hidden-xs hidden-sm">Address</label>
+                </div>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <textarea name="" class="form-control" placeholder="Enter Address..." rows="2" style="resize:none;"></textarea>
+                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row pad-top-5">
+                <div class="col-md-2">
+                  <label class="h4 hidden-xs hidden-sm">ZIP</label>
+                </div>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter ZIP-Code...">
+                    <span class="input-group-addon"><i class="fa fa-crosshairs"></i></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row pad-top-5">
+                <div class="col-md-2">
+                  <label class="h4 hidden-xs hidden-sm">Phone</label>
+                </div>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Phone Number...">
+                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- Form Fill New Ends -->
+
+          <!-- Choose Address -->
+            <div class="col-md-6 pad-all-5">
+              <div class="pad-all-15" style="background:#fff; box-shadow:0 0 3px rgba(0,0,0,.3); height:140px;">
+                <span class="h4"><b>VARUN KUMAR</b><br></span>
+                <p class="addr-view text-muted">
+                  Lives Somewhere in<br>
+                  Ghaziabad
+                </p><br>
+                <span class="phone-number"><i class="fa fa-phone"></i>&nbsp;+1 800 VARUN</span>
+                <span class="small text-muted" style="position:absolute; bottom:10px; right:15px;">(Click to Select)</span>
+              </div>  
+            </div>
+
+          <!-- Choose Address Ends here -->
+          </div>
+          <!-- Delivery Address Ends -->
+          <button type="submit" class="btn btn-danger pull-right"><b>CONTINUE</b>&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></button> 
+
+        </form>
+        </div>
+        <div class="col-md-4" style="border-left:1px solid #ddd; padding-top:25px; padding-bottom:25px;">
+          <span class="text-muted" style="">SELECTED ITEM</span><br>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-4 col-sm-5 col-xs-5">
+              <img class="" src="img/address.jpg" style="width:100px; height:100px;">
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-7">
+              <span class="h4"> 
+                <b>Product Name</b>
+              </span><br>
+              <span class="h4 price text-muted">
+                $ 5000
+              </span>
+            </div>
+          </div>
+
+          <div class="" style="padding-top:20px; padding-bottom:20px; margin-top:20px;">
+            <span class="text-muted small">Estimated Delivery</span><br>
+            <span class="h4">March 21, <b>2015</b></span><br><br>
+            <span class="text-muted small">Grand Total</span><br>
+            <span class="h4"><b>$ 5000</b></span><br><br>
+          </div>
+
+          <div class="hidden-sm hidden-xs" style="padding:20px; border: 2px dashed #ddd;">
+            <span class="h4"><b>HELP SECTION</b></span><br><br>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula ultricies sapien, ac imperdiet ligula rutrum ac. Cras eget erat mattis mi lacinia eleifend ac ac metus. Donec et augue a erat venenatis sodales id vitae sem.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- Main Slider Part - 2 Ends -->
+
+
+
+      <!-- Main Slider Part - 3 -->
+      <div id="slide3" class="">
+        <div class="col-md-8">
+          <form>
+            <div class="input-group margin-top-25">
+              <input type="text" class="form-control" placeholder="Enter Email...">
+              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+            </div>
+
+            <!-- CARD ENTRY -->
+            <div class="row pad-all-25 pad-top-0" id="form-delivery">
+              <br><br>
+              <div id="choose-card" class="overflow-hidden">
+                <button type="button" class="btn btn-default" onclick="$('#payment-fill').addClass('auto-height');$('#previous-cards').addClass('no-height');$('#choose-card').addClass('no-height');$('#add-card').removeClass('no-height');"><i class="fa fa-plus text-danger"></i></button>&nbsp;&nbsp;
+                <span class="h4"><b>CHOOSE CARD</b></span><br><br>
+              </div>
+
+              <div id="add-card" class="overflow-hidden no-height">
+                <button type="button" class="btn btn-default" onclick="$('#payment-fill').removeClass('auto-height');$('#previous-cards').removeClass('no-height');$('#add-card').addClass('no-height');$('#choose-card').removeClass('no-height');"><i class="fa fa-th-large text-danger"></i></button>&nbsp;&nbsp;
+                <span class="h4"><b>ADD CARD</b></span><br><br>
+              </div>
+
+
+              <!-- Form Fill New -->
+              <div id="payment-fill" class="no-height overflow-hidden">
+                <div class="row pad-top-5">
+                  <div class="col-md-4">
+                    <label class="h4 hidden-xs hidden-sm">Cardholder Name <span class="text-danger"><b>*</b></span></label>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Enter Name...">
+                  </div>
+                </div>
+
+                <div class="row pad-top-5">
+                  <div class="col-md-4">
+                    <label class="h4 hidden-xs hidden-sm">Card Number <span class="text-danger"><b>*</b></span></label>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" maxlength="16" placeholder="Enter Card Number...">
+                  </div>
+                </div>
+
+                <div class="row pad-top-5">
+                  <div class="col-md-4">
+                    <label class="h4 hidden-xs hidden-sm">Expiration Date <span class="text-danger"><b>*</b></span></label>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control col-md-4" maxlength="2" placeholder="MM" style="width:50px;">
+                    <input type="text" class="form-control col-md-8 margin-left-25" maxlength="4" placeholder="YYYY" style="width:70px;">
+                  </div>
+                </div>
+
+                <div class="row pad-top-5">
+                  <div class="col-md-4">
+                    <label class="h4 hidden-xs hidden-sm">CVV2 <span class="text-danger"><b>*</b></span></label>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Enter CVV2...">
+                  </div>
+                </div>
+
+                <div class="row pad-top-5">
+                  <div class="col-md-4">
+                    <label class="h4 hidden-xs hidden-sm">Billing Address <span class="text-danger"><b>*</b></span></label>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="checkbox">
+                      <input type="checkbox" checked>&nbsp;Use the Shipping Address.  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Form Fill New Ends -->
+
+            <!-- Previously Added Cards -->
+              <div id="previous-cards" class="overflow-hidden">
+                <div class="row pad-all-25 listing">
+                  <div class="row">
+                    <input type="radio" name="card-option" class="col-md-1 text-center">
+                    <div class="col-md-11">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label class="pad-right-25">XXXX</label>
+                          <label class="pad-right-25">XXXX</label>
+                          <label class="pad-right-25">XXXX</label>
+                          <label class="pad-right-25">5781</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <span class="col-md-6 text-muted">MASTER CARD</span>
+                        <span class="col-md-6 text-muted">Expiration Date : <span>02</span> / <span>16</span></span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            <!-- Previously Added Cards End -->
+
+            
+            </div>
+            <!-- CARD ENTRY Ends -->
+
+            <button type="submit" class="btn btn-danger pull-right"><b>BOOK</b>&nbsp;&nbsp;<i class="fa fa-cube"></i></button> 
+          </form>
+        </div>
+
+        <div class="col-md-4" style="border-left:1px solid #ddd; padding-top:25px; padding-bottom:25px;">
+          <span class="text-muted" style="">SELECTED ITEM</span><br>
+          <div class="row" style="padding-top:10px;">
+            <div class="col-md-4 col-sm-5 col-xs-5">
+              <img class="" src="img/address.jpg" style="width:100px; height:100px;">
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-7">
+              <span class="h4"> 
+                <b>Product Name</b>
+              </span><br>
+              <span class="h4 price text-muted">
+                $ 5000
+              </span>
+            </div>
+          </div>
+
+          <div class="margin-top-25">
+            <br><span class="text-muted">DELIVER TO</span><br><br>
+            <span class="h4"><b>VARUN KUMAR</b></span><br>
+            <p class="text-muted">
+              Lives Somewhere in<br>
+              Ghaziabad
+            </p>
+            <span class="text-muted"><i class="fa fa-phone"></i>&nbsp;+1 800 VARUN</span>
+          </div>
+
+          <div id="financials" class="margin-top-25 pad-top-25" style="border-top:2px solid #eee;">
+            <div class="row text-muted">
+              <div class="col-md-7">
+                <span>Advance</span>
+              </div>
+              <div class="col-md-5">
+                <span>$ 5000</span>
+              </div>
+            </div>
+
+            <div class="row pad-top-5 text-muted">
+              <div class="col-md-7">
+                <span>Delivery Charges</span>
+              </div>
+              <div class="col-md-5">
+                <span>$ 250</span>
+              </div>
+            </div>
+
+            <div class="row pad-top-5 h4" style="">
+              <b>
+                <div class="col-md-7">
+                  <span>GRAND TOTAL</span>
+                </div>
+                <div class="col-md-5">
+                  <span>$ 5250</span>
+                </div>
+              </b>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+      <!-- Main Slider Part - 3 Ends -->
+    </div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>

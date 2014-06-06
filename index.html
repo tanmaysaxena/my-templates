@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <style type="text/css">
+  .no-height{
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+    height:0px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+  }
+  .auto-height{
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+    padding-top:40px !important;
+    padding-bottom:40px !important;
+    height:auto !important;
+  }
+  .listing:nth-child(even){
+    background: #eee;
+  }
+  .listing:nth-child(odd){
+    background: #fff;
+  }
+  #form-delivery{
+    overflow:hidden;
+  }
+  .pad-top-0{
+    padding-top:0px;
+  }
+  .pad-top-5{
+    padding-top:5px;
+  }
+  .pad-all-5{
+    padding:5px;
+  }
+  .pad-all-15{
+    padding:15px;
+  }
+  .pad-all-25{
+    padding:25px;
+  }
+  .pad-left-25{
+    padding-left:25px;
+  }
+  .pad-right-25{
+    padding-right:25px;
+  }
+  .pad-top-25{
+    padding-top:25px;
+  }
+  .pad-bottom-25{
+    padding-bottom:25px;
+  }
+  .margin-top-25{
+    margin-top:25px !important;
+  }
+  .margin-left-25{
+    margin-left:25px;
+  }
+  .margin-right-25{
+    margin-right:25px;
+  }
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  #options{
+    list-style: none;
+    text-decoration: none;
+  }
+  #options > li{
+    -moz-transition:all .5s;
+    -o-transition:all .5s;
+    -ms-transition:all .5s;
+    -webkit-transition:all .5s;
+    transition:all .5s;
+    list-style: none;
+    text-decoration: none;
+    text-align: right;
+    padding:10px;
+    font-size: 11pt;
+    color:#000;
+    cursor: pointer;
+  }
+  #options > li a{
+    -moz-transition:all .5s;
+    -o-transition:all .5s;
+    -ms-transition:all .5s;
+    -webkit-transition:all .5s;
+    transition:all .5s;
+    text-decoration: none;
+    color:#000;
+  }
+  #options > li:hover a{
+    color:#00adef;
+  }
+  </style>
+</head>
+<body>
+	<div class="container">
+    <div class="col-md-2">
+      <div class="row">
+        <div id="img-holder" class="col-md-8" style="background:#eee; ">
+        </div>
+        <div class="col-md-4">
+          <div class="row btn-primary btn-quick" id="">
+
+          </div>
+          <div class="row btn-danger btn-quick" id="">
+          
+          </div>
+        </div>
+      </div>
+      <div class="row text-right pad-all-25">
+        <span class="h4">UserName</span>
+      </div><br><br><br>
+      <ul id="options">
+        <li>
+          <span><a href="">My Rentals&nbsp;&nbsp;<i class="fa fa-list"></i></a></span>
+        </li>
+        <li>
+          <span><a href="">My Orders&nbsp;&nbsp;<i class="fa fa-cubes"></i></a></span>
+        </li>
+        <li>
+          <span><a href="">My Cards&nbsp;&nbsp;<i class="fa fa-credit-card"></i></a></span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-9 pad-all-25" style="background:#eee; height:500px;">
+      <div class="row">
+        Home > xyz > (Breadcrumbs come here)
+      </div>
+      <br>
+      <div class="row">
+        <span class="h4"><b>MY RENTALS</b></span><br><br>
+        <div class="col-md-12" style="background:#aaa; height:400px;">
+          <div class="col-md-6 pad-all-5">
+            <div class="pad-all-15" style="background:#fff; ">
+              <div class="" style="">
+            </div>
+          </div>
+          
+          <div class="col-md-6"></div>
+        </div>
+      </div>
+      <div class="row">
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $('#img-holder').height($('#img-holder').width());
+    $('.btn-quick').height($('.btn-quick').width());
+  });
+  </script>
+</body>
+</html>
