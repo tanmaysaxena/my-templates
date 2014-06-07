@@ -36,6 +36,9 @@
   #form-delivery{
     overflow:hidden;
   }
+  .pad-all-0{
+    padding:0px;
+  }
   .pad-top-0{
     padding-top:0px;
   }
@@ -74,6 +77,26 @@
   }
   .overflow-hidden{
     overflow: hidden;
+  }
+  ul{
+    margin-top:40px;
+    list-style: none;
+    width:100%;
+  }
+  ul > li{
+    list-style: none;
+    padding:15px;
+    width:100%;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+  }
+  ul > li:hover{
+    background: #00adef;
+    cursor:pointer;
+    color:white;
+  }
+  .active-card-type{
+    background:rgba(52, 152, 219,0.3);
   }
   </style>
 </head>
@@ -277,110 +300,124 @@
       <!-- Main Slider Part - 3 -->
       <div id="slide3" class="">
         <div class="col-md-8">
-          <form>
-            <div class="input-group margin-top-25">
-              <input type="text" class="form-control" placeholder="Enter Email...">
-              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            </div>
-
-            <!-- CARD ENTRY -->
-            <div class="row pad-all-25 pad-top-0" id="form-delivery">
-              <br><br>
-              <div id="choose-card" class="overflow-hidden">
-                <button type="button" class="btn btn-default" onclick="$('#payment-fill').addClass('auto-height');$('#previous-cards').addClass('no-height');$('#choose-card').addClass('no-height');$('#add-card').removeClass('no-height');"><i class="fa fa-plus text-danger"></i></button>&nbsp;&nbsp;
-                <span class="h4"><b>CHOOSE CARD</b></span><br><br>
+            <form>
+              <div class="input-group margin-top-25">
+                <input type="text" class="form-control" placeholder="Enter Email...">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              </div>
+              
+              <!-- CARD ENTRY -->
+              <div class="row pad-all-25 pad-top-0" id="form-delivery">
+              <div class="col-md-3 pad-all-0" style="border-right:1px solid #00adef; padding-bottom:40px;">
+                <ul class="pad-all-0">
+                  <li class="active-card-type">Credit Card</li>
+                  <li>Debit Card</li>
+                  <li>Net-Banking</li>
+                  <li>Phone Banking</li>
+                  <li>eWallet</li>
+                </ul>
               </div>
 
-              <div id="add-card" class="overflow-hidden no-height">
-                <button type="button" class="btn btn-default" onclick="$('#payment-fill').removeClass('auto-height');$('#previous-cards').removeClass('no-height');$('#add-card').addClass('no-height');$('#choose-card').removeClass('no-height');"><i class="fa fa-th-large text-danger"></i></button>&nbsp;&nbsp;
-                <span class="h4"><b>ADD CARD</b></span><br><br>
-              </div>
-
-
-              <!-- Form Fill New -->
-              <div id="payment-fill" class="no-height overflow-hidden">
-                <div class="row pad-top-5">
-                  <div class="col-md-4">
-                    <label class="h4 hidden-xs hidden-sm">Cardholder Name <span class="text-danger"><b>*</b></span></label>
-                  </div>
-                  <div class="col-md-8">
-                    <input type="text" class="form-control" placeholder="Enter Name...">
-                  </div>
+              <div class="col-md-9" style="">
+                <br><br>
+                <div id="choose-card" class="overflow-hidden">
+                  <button type="button" class="btn btn-primary" onclick="$('#payment-fill').addClass('auto-height');$('#previous-cards').addClass('no-height');$('#choose-card').addClass('no-height');$('#add-card').removeClass('no-height');"><i class="fa fa-plus text-white"></i></button>&nbsp;&nbsp;
+                  <span class="h4"><b>CHOOSE CARD</b></span><br><br>
                 </div>
 
-                <div class="row pad-top-5">
-                  <div class="col-md-4">
-                    <label class="h4 hidden-xs hidden-sm">Card Number <span class="text-danger"><b>*</b></span></label>
-                  </div>
-                  <div class="col-md-8">
-                    <input type="text" class="form-control" maxlength="16" placeholder="Enter Card Number...">
-                  </div>
+                <div id="add-card" class="overflow-hidden no-height">
+                  <button type="button" class="btn btn-primary" onclick="$('#payment-fill').removeClass('auto-height');$('#previous-cards').removeClass('no-height');$('#add-card').addClass('no-height');$('#choose-card').removeClass('no-height');"><i class="fa fa-th-large text-white"></i></button>&nbsp;&nbsp;
+                  <span class="h4"><b>ADD CARD</b></span><br><br>
                 </div>
 
-                <div class="row pad-top-5">
-                  <div class="col-md-4">
-                    <label class="h4 hidden-xs hidden-sm">Expiration Date <span class="text-danger"><b>*</b></span></label>
-                  </div>
-                  <div class="col-md-8">
-                    <input type="text" class="form-control col-md-4" maxlength="2" placeholder="MM" style="width:50px;">
-                    <input type="text" class="form-control col-md-8 margin-left-25" maxlength="4" placeholder="YYYY" style="width:70px;">
-                  </div>
-                </div>
 
-                <div class="row pad-top-5">
-                  <div class="col-md-4">
-                    <label class="h4 hidden-xs hidden-sm">CVV2 <span class="text-danger"><b>*</b></span></label>
+                <!-- Form Fill New -->
+                <div id="payment-fill" class="no-height overflow-hidden">
+                  <div class="row pad-top-5">
+                    <div class="col-md-5">
+                      <label class="hidden-xs hidden-sm">Cardholder Name <span class="text-danger"><b>*</b></span></label>
+                    </div>
+                    <div class="col-md-7">
+                      <!-- Add the Name of the User from the Account Details -->
+                      <span class="text-left name_user">Varun Kumar&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" onclick="$('#name_entry').removeClass('hidden');$('.name_user').addClass('hidden');">Change</button></span>
+                      <input type="text" class="form-control hidden" placeholder="Enter Name..." id="name_entry">
+                    </div>
                   </div>
-                  <div class="col-md-8">
-                    <input type="text" class="form-control" placeholder="Enter CVV2...">
-                  </div>
-                </div>
 
-                <div class="row pad-top-5">
-                  <div class="col-md-4">
-                    <label class="h4 hidden-xs hidden-sm">Billing Address <span class="text-danger"><b>*</b></span></label>
+                  <div class="row pad-top-5">
+                    <div class="col-md-5">
+                      <label class="hidden-xs hidden-sm">Card Number <span class="text-danger"><b>*</b></span></label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control" maxlength="16" placeholder="Enter Card Number...">
+                    </div>
                   </div>
-                  <div class="col-md-8">
-                    <div class="checkbox">
-                      <input type="checkbox" checked>&nbsp;Use the Shipping Address.  
+
+                  <div class="row pad-top-5">
+                    <div class="col-md-5">
+                      <label class="hidden-xs hidden-sm">Expiration Date <span class="text-danger"><b>*</b></span></label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control col-md-4" maxlength="2" placeholder="MM" style="width:50px;">
+                      <input type="text" class="form-control col-md-8 margin-left-25" maxlength="4" placeholder="YYYY" style="width:70px;">
+                    </div>
+                  </div>
+
+                  <div class="row pad-top-5">
+                    <div class="col-md-5">
+                      <label class="hidden-xs hidden-sm">CVV2 <span class="text-danger"><b>*</b></span></label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control" maxlength="4" placeholder="CVV2" style="width:70px;">
+                    </div>
+                  </div>
+
+                  <div class="row pad-top-5">
+                    <div class="col-md-5">
+                      <label class="hidden-xs hidden-sm">Billing Address <span class="text-danger"><b>*</b></span></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="checkbox">
+                        <input type="checkbox" checked>&nbsp;Use the Shipping Address.  
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            <!-- Form Fill New Ends -->
+              <!-- Form Fill New Ends -->
 
-            <!-- Previously Added Cards -->
-              <div id="previous-cards" class="overflow-hidden">
-                <div class="row pad-all-25 listing">
-                  <div class="row">
-                    <input type="radio" name="card-option" class="col-md-1 text-center">
-                    <div class="col-md-11">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <label class="pad-right-25">XXXX</label>
-                          <label class="pad-right-25">XXXX</label>
-                          <label class="pad-right-25">XXXX</label>
-                          <label class="pad-right-25">5781</label>
+              <!-- Previously Added Cards -->
+                <div id="previous-cards" class="overflow-hidden">
+                  <div class="row pad-all-25 listing">
+                    <div class="row">
+                      <input type="radio" name="card-option" class="col-md-1 text-center">
+                      <div class="col-md-11">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label class="pad-right-25">XXXX</label>
+                            <label class="pad-right-25">XXXX</label>
+                            <label class="pad-right-25">XXXX</label>
+                            <label class="pad-right-25">5781</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <span class="col-md-6 text-muted">MASTER CARD</span>
+                          <span class="col-md-6 text-muted">Expiration Date : <span>02</span> / <span>16</span></span>
                         </div>
                       </div>
-                      <div class="row">
-                        <span class="col-md-6 text-muted">MASTER CARD</span>
-                        <span class="col-md-6 text-muted">Expiration Date : <span>02</span> / <span>16</span></span>
-                      </div>
-                    </div>
 
+                    </div>
                   </div>
                 </div>
+
+              <!-- Previously Added Cards End -->
+
+              
+              </div>
+              <!-- CARD ENTRY Ends -->
               </div>
 
-            <!-- Previously Added Cards End -->
-
-            
-            </div>
-            <!-- CARD ENTRY Ends -->
-
-            <button type="submit" class="btn btn-danger pull-right"><b>BOOK</b>&nbsp;&nbsp;<i class="fa fa-cube"></i></button> 
-          </form>
+              <button type="submit" class="btn btn-danger pull-right"><b>BOOK</b>&nbsp;&nbsp;<i class="fa fa-cube"></i></button> 
+            </form>
         </div>
 
         <div class="col-md-4" style="border-left:1px solid #ddd; padding-top:25px; padding-bottom:25px;">
